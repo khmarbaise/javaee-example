@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.soebes.examples.j2ee</groupId>
+    <artifactId>jee-parent</artifactId>
+    <version>1.2.3-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>shade</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.soebes.examples.j2ee</groupId>
+      <artifactId>domain</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.soebes.examples.j2ee</groupId>
+      <artifactId>service-client</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <configuration>
+          <shadedArtifactAttached>true</shadedArtifactAttached>
+          <filters>
+            <filter>
+              <artifact>*:*</artifact>
+              <excludes>
+                <exclude>META-INF/**</exclude>
+                <exclude>META-INF/maven/**</exclude>
+              </excludes>
+            </filter>
+          </filters>
+        </configuration>
+        <executions>
+          <execution>
+            <id>test</id>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <shadedClassifierName>test</shadedClassifierName>
+            </configuration>
+          </execution>
+          <execution>
+            <id>dev</id>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <shadedClassifierName>dev</shadedClassifierName>
+            </configuration>
+          </execution>
+          <execution>
+            <id>prod</id>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <shadedClassifierName>prod</shadedClassifierName>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
