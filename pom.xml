@@ -5,7 +5,8 @@
   <parent>
     <groupId>com.soebes.smpp</groupId>
     <artifactId>smpp</artifactId>
-    <version>5.3.14</version>
+    <version>6.0.3</version>
+    <relativePath/>
   </parent>
 
   <groupId>com.soebes.examples.j2ee</groupId>
@@ -64,6 +65,7 @@
   </dependencyManagement>
 
   <modules>
+    <module>assembly</module>
     <module>webgui</module>
     <module>app</module>
     <module>domain</module>
@@ -78,8 +80,15 @@
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <version>3.4.2</version>
+          <artifactId>maven-failsafe-plugin</artifactId>
+          <executions>
+            <execution>
+              <goals>
+                <goal>integration-test</goal>
+                <goal>verify</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>

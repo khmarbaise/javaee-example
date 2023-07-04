@@ -43,7 +43,6 @@
         <executions>
           <execution>
             <id>test</id>
-            <phase>package</phase>
             <goals>
               <goal>shade</goal>
             </goals>
@@ -53,7 +52,6 @@
           </execution>
           <execution>
             <id>dev</id>
-            <phase>package</phase>
             <goals>
               <goal>shade</goal>
             </goals>
@@ -63,7 +61,6 @@
           </execution>
           <execution>
             <id>prod</id>
-            <phase>package</phase>
             <goals>
               <goal>shade</goal>
             </goals>
