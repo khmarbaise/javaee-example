@@ -11,7 +11,7 @@
 
   <groupId>com.soebes.examples.j2ee</groupId>
   <artifactId>jee-parent</artifactId>
-  <version>1.2.4-SNAPSHOT</version>
+  <version>1.2.4</version>
   <packaging>pom</packaging>
 
   <properties>
@@ -23,7 +23,7 @@
     <developerConnection>scm:git:ssh://git@github.com/khmarbaise/javaee-example.git</developerConnection>
     <connection>scm:git:https://github.com/khmarbaise/javaee-example.git</connection>
     <url>https://github.com/khmarbaise/javaee-example</url>
-    <tag>HEAD</tag>
+    <tag>jee-parent-1.2.4</tag>
   </scm>
 
   <distributionManagement>
