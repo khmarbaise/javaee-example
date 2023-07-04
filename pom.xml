@@ -20,9 +20,9 @@
   </properties>
 
   <scm>
-    <developerConnection>scm:git:ssh://git@github.com/khmarbaise/javaee.git</developerConnection>
-    <connection>scm:git:https://github.com/khmarbaise/javaee.git</connection>
-    <url>https://github.com/khmarbaise/javaee</url>
+    <developerConnection>scm:git:ssh://git@github.com/khmarbaise/javaee-example.git</developerConnection>
+    <connection>scm:git:https://github.com/khmarbaise/javaee-example.git</connection>
+    <url>https://github.com/khmarbaise/javaee-example</url>
     <tag>HEAD</tag>
   </scm>
 
