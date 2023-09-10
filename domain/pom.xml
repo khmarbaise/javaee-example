@@ -9,7 +9,6 @@
   </parent>
 
   <artifactId>domain</artifactId>
-
   <dependencies>
     <dependency>
       <groupId>org.slf4j</groupId>
