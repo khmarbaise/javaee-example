@@ -47,6 +47,7 @@
             </goals>
             <phase>package</phase>
             <configuration>
+              <shadedClassifierName>dev</shadedClassifierName>
               <shadedArtifactAttached>true</shadedArtifactAttached>
             </configuration>
           </execution>
