@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.soebes.smpp</groupId>
     <artifactId>smpp</artifactId>
-    <version>7.0.0</version>
+    <version>7.0.2</version>
     <relativePath />
   </parent>
 
@@ -70,8 +70,8 @@
     <module>webgui</module>
     <module>app</module>
     <module>domain</module>
-    <module>service</module>
     <module>service-client</module>
+    <module>service</module>
     <module>appasm</module>
     <module>shade</module>
   </modules>
